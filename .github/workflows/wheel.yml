@@ -11,7 +11,7 @@ env:
 jobs:
   build:
     name: ${{ matrix.python }} ${{ matrix.os-name }} ${{ matrix.platform }}
-    runs-on: [self-hosted, Linux, X64, 0beb2dddaaa4]
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
